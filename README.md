@@ -49,3 +49,18 @@ class EmailConfig
     ];
 }
 ```
+
+### S3 StreamWrapper
+
+```php
+$client = new Aws\S3\S3Client(Configure::read('Aws'));
+$client->registerStreamWrapperV2();
+```
+
+or
+
+```php
+CakePlugin::load('Aws', [
+    'bootstrap' => true,
+]);
+```

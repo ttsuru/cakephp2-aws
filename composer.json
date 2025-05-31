@@ -3,13 +3,16 @@
     "type": "cakephp-plugin",
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "aws/aws-sdk-php": "^3.343",
         "cakephp/cakephp": "^2.10",
         "composer/installers": "*"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
     },
     "extra": {
         "installer-name": "Aws"

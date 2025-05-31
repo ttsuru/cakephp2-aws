@@ -12,7 +12,7 @@ class AwsComponent extends Component
     public function __construct($collection, $setting = [])
     {
         parent::__construct($collection, $setting);
-        $this->sdk = new Sdk(Configure::read('Aws'));
+        $this->sdk = new Sdk((array) Configure::read('Aws'));
     }
 
     public function __get($name)
